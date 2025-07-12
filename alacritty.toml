@@ -1,60 +1,47 @@
-live_config_reload = true
-
-[env]
-
-#Window
-
 [window]
 opacity = 0.9
+dimensions = { columns = 84, lines = 22 }
 
-[window.dimensions]
-columns = 84
-lines = 22
-
-#Shell
-[shell]
+[terminal.shell]
 program = "/usr/bin/fish"
-args = ["-c", "fastfetch; exec fish"]
+args = ["-c", "exec fish"]
 
-#Keybindings
-
-[keyboard]
+[Keyboard]
 [[keyboard.bindings]]
-action = "Copy"
-mods = "Control|Shift"
-key = "C"
+  [[action]]
+    action = "Copy"
+    mods = "Control|Shift"
+    key = "C"
+  [[action]]
+    action = "Paste"
+    mods = "Control|Shift"
+    key = "V"
 
-[[keyboard.bindings]]
-action = "Paste"
-mods = "Control|Shift"
-key = "V"
+# Font
 
-#Font
 
 [font]
 size = 10
 
-[font.bold]
-family = "Liberation Mono"
-style = "Regular"
+[font.normal]
+family = "Geist Mono"
+style = "Medium"
 
-[font.bold_italic]
-family = "Liberation Mono"
-style = "Heavy Italic"
+[font.bold]
+family = "Geist Mono"
+style = "Regular"
 
 [font.italic]
 family = "Liberation Mono"
 style = "Medium Italic"
 
-[font.normal]
+[font.bold_italic]
 family = "Liberation Mono"
-style = "Medium"
+style = "Heavy Italic"
 
 [scrolling]
 history = 10000
 multiplier = 4
-
-#Theme
 
 [colors.primary]
 background = "#1e1e2e"
@@ -132,8 +119,11 @@ color = "#fab387"
 index = 17
 color = "#f5e0dc"
 
-#Cursor
-
 [cursor.style]
-shape = "beam"
-blinking = "on"
+shape = "Beam"
+blinking = "On"
+
+[general]
+live_config_reload = true
+
+[terminal]
