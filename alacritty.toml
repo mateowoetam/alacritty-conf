@@ -6,13 +6,12 @@ dimensions = { columns = 84, lines = 22 }
 program = "/usr/bin/fish"
 args = ["-c", "exec fish"]
 
-[Keyboard]
 [[keyboard.bindings]]
-  [[action]]
     action = "Copy"
     mods = "Control|Shift"
     key = "C"
-  [[action]]
+
+[[keyboard.bindings]]
     action = "Paste"
     mods = "Control|Shift"
     key = "V"
